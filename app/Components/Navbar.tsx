@@ -1,30 +1,30 @@
-import React from "react";
-import Link from "next/link";
+// components/Navbar.tsx
 
+import Link from "next/link";
+import LoginForm from "./auth/LoginForm";
 const Navbar = () => {
   return (
-    <nav className="bg-green-700 py-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-gray-800 p-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between">
-          <div className="flex-shrink-">
-            <Link
-              href="/"
-              className="text-white hover:bg-green-600 px-3 py-2 rounded-lg"
-            >
-              Home
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-white font-bold text-xl">
+              My Website
             </Link>
-            <Link
-              href="/about"
-              className="text-white hover:bg-green-600 px-3 py-2 rounded-lg"
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="text-white hover:bg-green-600 px-3 py-2 rounded-lg"
-            >
-              Contact
-            </Link>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center space-x-4">
+              <Link href="/about" className="text-gray-300 hover:text-white">
+                About
+              </Link>
+              <Link href="/contact" className="text-gray-300 hover:text-white">
+                Contact
+              </Link>
+
+              <LoginForm />
+
+              {/*  more nav items as needed */}
+            </div>
           </div>
         </div>
       </div>
