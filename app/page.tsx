@@ -2,14 +2,14 @@ import React from "react";
 import RootLayout from "./layout";
 import { ThemeProvider } from "next-themes";
 import Navbar from "./Components/Navbar";
-
+import LoginForm from "./Components/auth/LoginForm";
 function Page() {
   return (
     <RootLayout>
       <ThemeProvider>
         <div>
           <main>
-            <p>This is a simple homepage created with React and Next.js.</p>
+            <LoginForm />
           </main>
         </div>
       </ThemeProvider>
